@@ -1,0 +1,23 @@
+<body>
+    <style>
+        p1{
+            font-size: 28px;
+            color: blueviolet;
+            text-align: left;
+            font-weight: bold;
+        }  
+    </style>
+</body>
+
+<footer>
+    <style> 
+      footer {
+        display: inline-flex;
+        padding: 3px;
+        font-size: 20px;
+        background-color: darkblue;
+        color: white;
+      }
+    </style>
+    <p>All copyrights reserved @ TCS.com</p>
+</footer>
