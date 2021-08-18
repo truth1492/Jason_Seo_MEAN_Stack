@@ -1,0 +1,36 @@
+<div>
+    <h2>
+        Welcome User {{user}}
+    </h2>
+</div>
+
+<div id="holdTable">
+    <form id="chartInput">
+        <label for="contactName">Contact Name: </label> <input id="clientName" type="text" ><br><br>
+
+        <label for="phoneNumber">Phone Number: </label> <input id="projectName" type="text" ><br>
+        
+        <input style="margin:25px;" type="button" value="Save" onclick="storeData()"/>
+       
+        <button onclick="document.getElementById('myInput').value = ''">Clear</button>
+
+    </form>
+</div>
+
+<div id="holdTable">
+    <form id="chartInput">
+
+        <script>
+            window.onload = function() {
+               displayData();
+            }
+        </script> 
+
+        <hr/>
+
+        <b>Contact Details</b><br><br><br>
+        <div id="main">
+            
+        </div>
+    </form>
+</div>
