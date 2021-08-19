@@ -1,0 +1,83 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/x.x.x/ng2-bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="card">
+    <form [formGroup]="userForm">
+      <div class="mt-5">
+        <h2 style="color: rgb(47, 24, 255);"> To-Do Tasks </h2>
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label > ID </label>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                  <input type="text" formControlName="id" class="form-control">
+                </div>
+            </div>
+          </div><br/>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label > Name </label>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                  <input type="text" formControlName="name" class="form-control">
+                </div>
+            </div>
+          </div><br/>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label > Task </label>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                  <input type="text" formControlName="task" class="form-control">
+                </div>
+            </div>
+          </div><br/>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label > Dead Line </label>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                  <input type="text" formControlName="deadline" class="form-control">
+                </div>
+            </div>
+          </div>
+          <br>
+          <div class="form-row mt-4">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary" (click)="addItem()">Submit</button> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;    &nbsp; &nbsp;
+              <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+            </div>
+          </div><hr/>
+        </div>
+      </div>
+    </form>
+    
+    <div class="col-md-8 mt-4 mb-4">
+      <h2 style="color: rgb(47, 24, 255);"> To-Do Lists </h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Task</th>
+            <th>Dead Line</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let item of listData">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.task}}</td>
+            <td>{{item.deadline}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="removeItems(item)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
