@@ -1,0 +1,14 @@
+[
+    {"question":"In what city was Jason born?", "ans1":"New York City", "ans2":"Chicago", "ans3":"Atlanta", "ans4":"Seoul", "correctAns":"Seoul"},
+    {"question":"What is Jason's first pet's name?", "ans1":"Mong", "ans2":"Sophie", "ans3":"Coco", "ans4":"Teddy", "correctAns":"Mong"},
+    {"question":"What is color of USA flag?", "ans1":"Red, Blue, Green", "ans2":"Red, Orange, Green", "ans3":"Red, Blue, White", "ans4":"Red, Green, White", "correctAns":"Red, Blue, White"},
+    {"question":"In what year was Jason born?", "ans1":"1910", "ans2":"1982", "ans3":"1993", "ans4":"1990", "correctAns":"1990"},
+    {"question":"What is color of sky?", "ans1":"Yellow", "ans2":"Red", "ans3":"Blue", "ans4":"Black", "correctAns":"Blue"},
+    {"question":"In what continent is Greence", "ans1":"Asia", "ans2":"South America", "ans3":"Africa", "ans4":"Europe", "correctAns":"Europe"},
+    {"question":"What is the largest state in US?", "ans1":"Georgia", "ans2":"New York", "ans3":"Alaska", "ans4":"Texas", "correctAns":"Alaska"},
+    {"question":"What is the smallest state in US?", "ans1":"Rhode Island", "ans2":"New Jersey", "ans3":"Vermont", "ans4":"Delaware", "correctAns":"Rhode Island"},
+    {"question":"In what state is Destin Beach located?", "ans1":"California", "ans2":"Florida", "ans3":"Rhode Island", "ans4":"New York", "correctAns":"Florida"},
+    {"question":"What dog breed is Scooby Doo?", "ans1":"Poodle", "ans2":"Afgan Hound", "ans3":"Great Dane", "ans4":"Golden Retreiver", "correctAns":"Great dane"}
+]
+
+
