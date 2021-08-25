@@ -8,7 +8,7 @@
     {"question":"What is the largest state in US?", "ans1":"Georgia", "ans2":"New York", "ans3":"Alaska", "ans4":"Texas", "correctAns":"Alaska"},
     {"question":"What is the smallest state in US?", "ans1":"Rhode Island", "ans2":"New Jersey", "ans3":"Vermont", "ans4":"Delaware", "correctAns":"Rhode Island"},
     {"question":"In what state is Destin Beach located?", "ans1":"California", "ans2":"Florida", "ans3":"Rhode Island", "ans4":"New York", "correctAns":"Florida"},
-    {"question":"What dog breed is Scooby Doo?", "ans1":"Poodle", "ans2":"Afgan Hound", "ans3":"Great Dane", "ans4":"Golden Retreiver", "correctAns":"Great dane"}
+    {"question":"What dog breed is Scooby Doo?", "ans1":"Poodle", "ans2":"Afgan Hound", "ans3":"Great Dane", "ans4":"Golden Retreiver", "correctAns":"Great Dane"}
 ]
 
 

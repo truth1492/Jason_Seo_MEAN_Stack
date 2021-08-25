@@ -3,14 +3,23 @@
     <form [formGroup]="myForm" (ngSubmit)="getSelectedValues()">
         <div *ngFor="let q of allQuestions; let i = index">
             <p>{{i + 1}}. {{q.question}}</p>
-            <input type="radio" formControlName={{q.question}} value={{q.ans1}}><span id="{{q.ans1}}">{{q.ans1}}</span> <br>
-            <input type="radio" formControlName={{q.question}} value={{q.ans2}}><span id="{{q.ans2}}">{{q.ans2}}</span> <br>
-            <input type="radio" formControlName={{q.question}} value={{q.ans3}}><span id="{{q.ans3}}">{{q.ans3}}</span> <br>
-            <input type="radio" formControlName={{q.question}} value={{q.ans4}}><span id="{{q.ans4}}">{{q.ans4}}</span> <br>
+            <input type="radio" #btn1  formControlName={{q.question}} value={{q.ans1}}>
+            <span id="{{q.ans1}}" [ngClass]="{'highlight': selectedAnswers[i] && q.correctAns  === q.ans1, 'incorrect':btn1.checked && selectedAnswers[i] && q.correctAns  !== q.ans1 }">{{q.ans1}}</span> <br>
+  
+            <input type="radio" #btn2  formControlName={{q.question}} value={{q.ans2}}>
+            <span id="{{q.ans2}}" [ngClass]="{'highlight': selectedAnswers[i] && q.correctAns  === q.ans2, 'incorrect':btn2.checked && selectedAnswers[i] && q.correctAns  !== q.ans2 }">{{q.ans2}}</span> <br>
+  
+            <input type="radio" #btn3 formControlName={{q.question}} value={{q.ans3}}>
+            <span id="{{q.ans3}}" [ngClass]="{'highlight': selectedAnswers[i] && q.correctAns  === q.ans3, 'incorrect':btn3.checked && selectedAnswers[i] && q.correctAns  !== q.ans3 }">{{q.ans3}}</span> <br>
+  
+            <input type="radio" #btn4  formControlName={{q.question}} value={{q.ans4}}>
+            <span id="{{q.ans4}}" [ngClass]="{'highlight': selectedAnswers[i] && q.correctAns  === q.ans4, 'incorrect':btn4.checked && selectedAnswers[i] && q.correctAns  !== q.ans4 }">{{q.ans4}}</span> <br>
         </div><br/>
         <input type="submit" value="Submit" [disabled]="myForm.invalid">
+        
+        <p *ngIf="correctAnswers"> Result: {{correctAnswers.length}} / {{allQuestions.length}}
+            <span style="color:green" *ngIf="correctAnswers.length > 5"> passed </span>
+            <span style="color:red" *ngIf="correctAnswers.length <= 5"> failed </span>
+        </p>
     </form>
-    <div class="result">
-        <h3 [ngStyle]="{'color':flagResult? 'green' : 'red'}">{{result}}</h3>
-    </div>
-</div>
+  </div>
