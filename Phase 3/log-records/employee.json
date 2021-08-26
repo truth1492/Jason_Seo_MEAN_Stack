@@ -4,13 +4,15 @@
             "firstname": "Jason",
             "lastname": "Seo",
             "gender": "Male",
-            "emailId": "truth1492@gmail.com"
+            "emailId": "truth1492@gmail.com",
+            "currentDate": "08-25 20:0"
         },
         {
             "firstname": "Jane",
             "lastname": "Lee",
             "gender": "Female",
-            "emailId": "jlee1102@hotmail.com"
+            "emailId": "jlee1102@hotmail.com",
+            "currentDate": "08-25 20:0"
         }
     ]
 }
