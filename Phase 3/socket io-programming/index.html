@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Connecting library file part of node_module folder-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket = io();
+        var messages = document.getElementById('messages');
+        var form = document.getElementById('form');
+        var input = document.getElementById('input');
+
+        function sendMsg(){
+            var response = ["Welcome!", "Hello!"];
+
+            let date_ob = new Date();
+            let date = ("0" + date_ob.getDate()).slice(-2);
+            let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+            let hours = date_ob.getHours();
+            let minutes = date_ob.getMinutes();
+            let currentDate = (month + "-" + date + " " + hours + ":" + minutes);
+
+            let user = document.getElementById("user").value;
+            let userMsg = document.getElementById("msg").value;
+
+            for(var i=0; i<response.length; i++){
+                document.getElementById("messages").innerHTML += "[" + currentDate + "] " + "Server: " + response[i] + "\n";
+                document.getElementById("messages").innerHTML += "[" + currentDate + "] " + user + ": " + userMsg + "\n";
+            }
+        }
+        socket.on("obj2",(msg)=> {
+            console.log(msg);
+        })
+    </script>
+</head>
+<body>
+    <h2>Chatting with Socket IO</h2><br/><br/>
+    Name: <input type="text" id="user" class="form-control"><br/><br/>
+    Messages : <textarea type="text" id="msg"/></textarea><br/><br/>
+    <input type="button" value="Send" onClick="sendMsg()"/><br/><br/>
+    <textarea name="message" id="messages" cols="90" rows="5"></textarea>
+</body>
+</html>
