@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Connecting library file part of node_module folder-->
+    
+    <script type="text/JavaScript">
+        
+        var messages = document.getElementById('messages');
+        var form = document.getElementById('form');
+        var input = document.getElementById('input');
+
+        function sendMsg(){
+            let user = document.getElementById("user").value;
+            let userMsg = document.getElementById("msg").value;
+
+            /*for(var i=0; i<response.length; i++){
+                document.getElementById("messages").innerHTML += "[" + currentDate + "] " + "Server: " + response[i] + "\n";
+                document.getElementById("messages").innerHTML += "[" + currentDate + "] " + user + ": " + userMsg + "\n";
+            }*/
+
+        }
+    </script>
+    <style>
+        .labelClass{
+            float: left;
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Chat Log</h2><br/>
+    <form class="form" action="/chatlog" method="POST">
+        <span class="labelClass">Name:</span><input type="text" name="user"><br/><br/>
+        <span class="labelClass">Message:</span><input type="text" name="msg"><br/><br/>
+        <input type="submit" value="Send"><br/><br/><br/>
+    </form>    
+</body>
+</html>
